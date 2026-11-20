@@ -1,71 +1,47 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PacketFlow Privacy Policy</title>
-<style>
-  body { font-family: -apple-system, system-ui, Segoe UI, Roboto, sans-serif; line-height: 1.6; max-width: 720px; margin: 0 auto; padding: 24px 18px; color: #1a1a1a; background: #fff; }
-  h1 { font-size: 26px; margin-bottom: 4px; }
-  h2 { font-size: 18px; margin-top: 28px; }
-  hr { border: 0; border-top: 1px solid #ddd; margin: 36px 0; }
-  .muted { color: #666; font-size: 14px; }
-  ul { padding-left: 20px; }
-  @media (prefers-color-scheme: dark) {
-    body { background: #0b0b0d; color: #eaeaea; }
-    hr { border-top-color: #333; }
-    .muted { color: #999; }
-  }
-</style>
-</head>
-<body>
-
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:720px;margin:40px auto;padding:0 18px;color:#111}h1{font-size:28px}h2{margin-top:28px;font-size:20px}a{color:#111}</style></head><body>
 <h1>PacketFlow Privacy Policy</h1>
-<p class="muted">Last updated: November 13, 2026</p>
+<p><b>Kinetic Studio</b> (owner and developer: Avniye Kaçak, individual developer account) · Last updated: 21 November 2026 · Contact: flowent.contact@gmail.com</p>
 
-<p>PacketFlow is published by Avniye Kaçak. This policy explains what information PacketFlow handles.</p>
+<h2>Summary</h2>
+<p>PacketFlow runs a local VPN tunnel on your phone. The developer does not run a server that your traffic passes through, and the developer does not collect, store or sell your browsing data, IP addresses or personal information.</p>
 
-<h2>1. Information PacketFlow handles</h2>
-<p>PacketFlow does not send user data to our servers, does not require an account, and does not track users. To do its job, PacketFlow stores the following only on your device:</p>
+<h2>How the VPN works</h2>
+<p>PacketFlow uses Android's VpnService API to route the traffic of the apps you choose through a tunnel that runs <b>on your device</b>. Your traffic then goes directly from your phone to the sites and services you use. It does not pass through any PacketFlow server. We cannot see which sites you visit or what you send or receive.</p>
+
+<h2>Information that leaves your device</h2>
 <ul>
-  <li><strong>Settings:</strong> theme, split-tunnel mode, and the list of selected apps.</li>
-  <li><strong>Last connection status and error logs:</strong> the reason for the last error and crash information. Stored only on the device.</li>
-  <li><strong>Live traffic counters:</strong> connection speed and total data transferred. Held in memory only while PacketFlow is open and never saved.</li>
+<li><b>DNS lookups.</b> To resolve site names, PacketFlow sends encrypted DNS-over-HTTPS requests to public resolvers: Cloudflare (1.1.1.1) and Google Public DNS (8.8.8.8). These providers receive the domain names that your apps look up and your IP address, under their own privacy policies. We do not receive this data.</li>
+<li><b>Speed test.</b> Only when you tap the speed test, PacketFlow connects to speed.cloudflare.com to measure ping, download and upload. Cloudflare receives your IP address and the test traffic under its own privacy policy.</li>
+<li><b>Feedback.</b> If you choose "Send feedback", your email app opens with a message you can edit. Optional device information (app version, Android version, device model, language) is attached only if you leave that option on. Nothing is sent unless you send the email.</li>
 </ul>
 
-<h2>2. Network traffic</h2>
-<p>While connected, the network traffic of apps on your device is routed through a local tunnel inside the device. This traffic goes directly from your device to the destinations your apps connect to. It is not sent to PacketFlow's servers or to any other third party. PacketFlow does not record or store this traffic, and does not use it for advertising or analytics.</p>
+<h2>Information stored on your device</h2>
+<p>PacketFlow stores your settings (theme, language, font) and your split-tunnel app list on your device. The app list and error notes are encrypted with a key held in the Android Keystore. App backup is turned off. PacketFlow does not write packet contents, IP addresses or visited sites to logs.</p>
 
-<h2>3. Third parties</h2>
-<p>PacketFlow does not use third-party analytics, advertising, or crash-reporting services. PacketFlow contains no SDK for these purposes.</p>
-
-<h2>4. Permissions</h2>
+<h2>Permissions</h2>
 <ul>
-  <li><strong>VPN service (VpnService):</strong> Needed to route the network traffic of apps on your device through the local tunnel. You can remove this permission at any time from Android's system VPN settings.</li>
-  <li><strong>Internet and network state:</strong> To run the tunnel and check whether a connection is available.</li>
-  <li><strong>Notifications:</strong> To show your connection status.</li>
-  <li><strong>Installed app list:</strong> So you can choose apps in the split-tunnel settings. This list is not sent off your device.</li>
+<li><b>VPN (BIND_VPN_SERVICE / VpnService):</b> needed to create the tunnel. It is used only for this purpose.</li>
+<li><b>Internet and network state:</b> needed to connect and to show connection status.</li>
+<li><b>Foreground service:</b> keeps the tunnel running while the app is in the background, with a visible notification.</li>
+<li><b>Notifications:</b> shows the connection status.</li>
 </ul>
+<p>PacketFlow does not request access to your contacts, location, camera, microphone, SMS or files.</p>
 
-<h2>5. Storage and deletion</h2>
-<p>All data PacketFlow saves stays on your device. Uninstalling PacketFlow deletes this data. You can also delete it by clearing PacketFlow's data in Android settings.</p>
+<h2>Sharing, selling and advertising</h2>
+<p>The developer does not sell or share personal data. PacketFlow contains no advertising and no third-party analytics or tracking SDKs. It does not inject, replace or redirect ads or traffic.</p>
 
-<h2>6. Users in Turkey (KVKK)</h2>
-<p>Personal data processed in Turkey is covered by Law No. 6698 on the Protection of Personal Data (KVKK). The data controller is Avniye Kaçak. Because PacketFlow does not collect personal data in the way described above, there is little data to access or correct. To exercise your rights under KVKK, contact us at <a href="mailto:flowent.contact@gmail.com">flowent.contact@gmail.com</a>.</p>
+<h2>Children</h2>
+<p>PacketFlow is not directed to children under 13 (or the minimum age in your country).</p>
 
-<h2>7. Children</h2>
-<p>PacketFlow is not directed at children under 13 and does not knowingly collect data from children.</p>
+<h2>Your choices</h2>
+<p>You can disconnect at any time from the app or the notification, choose which apps use the tunnel, and uninstall PacketFlow to remove all data stored on your device.</p>
 
-<h2>8. Changes</h2>
-<p>We may update this policy. Changes are published on this page and the "Last updated" date is changed.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be published on this page with a new date.</p>
 
-<h2>9. Contact</h2>
-<p>For questions: <a href="mailto:flowent.contact@gmail.com">flowent.contact@gmail.com</a></p>
-
-<hr>
-
-<h2>PacketFlow Gizlilik Politikası (KVKK)</h2>
-<p>PacketFlow'un Türkiye'de işlediği kişisel veriler, 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamındadır. Veri sorumlusu Avniye Kaçak'tır. Yukarıda anlatıldığı şekilde PacketFlow kişisel veri toplamadığı için işlenen veri çok azdır. KVKK kapsamındaki haklarınızı kullanmak için <a href="mailto:flowent.contact@gmail.com">flowent.contact@gmail.com</a> adresinden bize ulaşabilirsiniz.</p>
-
-</body>
-</html>
+<h2>Contact</h2>
+<p>Kinetic Studio, Avniye Kaçak · flowent.contact@gmail.com</p>
+</body></html>
